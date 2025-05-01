@@ -1,0 +1,15 @@
+---
+apiversion: v1
+kind: pod
+metadata: 
+  name: hello-pod
+  labels:
+    app: hello-pod
+spec:
+  containers:
+    - name: web
+      image: httpd
+      ports:
+        - name: web
+          containerport: 80
+          protocol: TCP
